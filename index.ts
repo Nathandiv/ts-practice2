@@ -35,10 +35,10 @@ class BankAcoount{
     }
 
     withdraw(amount:number):void{
-       if ( this.balance += amount
+       if ( this.balance >= amount
         ) {
             this.balance -= amount
-            console.log(`you deposit was succesfull: current balance R${this.balance}`);
+            console.log(`withdrawal was succesfull: current balance R${this.balance}`);
        }else {
         console.log(`insufficient funds`);
        }
@@ -49,7 +49,7 @@ class BankAcoount{
 
 
 const account = new BankAcoount(11123,500)
-// account.deposit(1000)
+account.deposit(1000)
 account.withdraw(300)
 
 
