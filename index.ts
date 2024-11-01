@@ -52,40 +52,85 @@
 // account.deposit(1000)
 // account.withdraw(300)
 
-class Products {
-   name:string;
-   price:number;
-   stock:number;
-   constructor (name:string,price:number,stock:number){
-    this.name =name;
-    this.price =price;
-    this.stock =stock;
-   }
+// class Products {
+//    name:string;
+//    price:number;
+//    stock:number;
+//    constructor (name:string,price:number,stock:number){
+//     this.name =name;
+//     this.price =price;
+//     this.stock =stock;
+//    }
 
-   isAvailable():boolean{
-if (this.stock >0){
-    return true;
-}else{
-    return false ;
-}
-   }
+//    isAvailable():boolean{
+// if (this.stock >0){
+//     return true;
+// }else{
+//     return false ;
+// }
+//    }
 
-   purchase(quantity:number):string{
-    if (this.stock >= quantity) {
-        this.stock -= quantity
-        return `purchase successfull ${quantity} ${this.name}(s) bought remaining stock ${this.stock}`
+//    purchase(quantity:number):string{
+//     if (this.stock >= quantity) {
+//         this.stock -= quantity
+//         return `purchase successfull ${quantity} ${this.name}(s) bought remaining stock ${this.stock}`
         
-    }else {
-        return `Insufficient stock for the required quantity `
+//     }else {
+//         return `Insufficient stock for the required quantity `
+//     }
+//    }
+// }
+//  const product = new Products("Car",65000,10)
+//  console.log(product.isAvailable());
+//  console.log(product.purchase(3));
+//  console.log(product.purchase(2));
+
+// let day :number;
+//  switch(day){
+//     case 0:
+//         console.log(`Today is Sunday`);
+//         break;
+        
+//         case 1 :
+//         console.log(`Today is Monday`);
+
+//         case 2 :
+//         console.log(`Today is Tuesday`);
+
+//         case 3:
+//         console.log(`Today is Wednesday`);
+
+//  }
+
+class TrafficLights {
+    color:string;
+
+    constructor(color:string){
+        this.color = color.toLocaleLowerCase();
     }
-   }
+
+    getAction():string{
+        switch (this.color) {
+            case "red":
+                
+                return "Stop";
+                
+            case "yellow":
+                
+                return "Prepare to stop";
+
+            case "green":
+                
+                return "Go";
+        
+            default:
+                    return "Invalid color";
+        }
+    }
+
+
+
 }
- const product = new Products("Car",65000,10)
- console.log(product.isAvailable());
- console.log(product.purchase(3));
- console.log(product.purchase(2));
-
-
 
 
 
