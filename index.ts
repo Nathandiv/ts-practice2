@@ -128,11 +128,16 @@ class TrafficLights {
         }
     }
 
-
-
 }
 
+const light1 = new TrafficLights("Red")
+console.log(light1.getAction());
 
+const light2 = new TrafficLights("yellow")
+console.log(light2.getAction());
+
+const light3 = new TrafficLights("green")
+console.log(light3.getAction());
 
 
 
